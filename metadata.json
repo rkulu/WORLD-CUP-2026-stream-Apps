@@ -1,0 +1,6 @@
+{
+  "name": "BolaKuy 2026",
+  "description": "Aplikasi Streaming Sepak Bola 2026 dengan Kotlin, Jetpack Compose, dan ExoPlayer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
