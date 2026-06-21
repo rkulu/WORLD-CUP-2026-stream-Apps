@@ -8,12 +8,12 @@ plugins {
 
 android {
   namespace = "com.example"
-  compileSdk { version = release(36) { minorApiLevel = 1 } }
+  compileSdk = 35
 
   defaultConfig {
     applicationId = "com.aistudio.bolakuy2026.wryqz"
     minSdk = 24
-    targetSdk = 36
+    targetSdk = 35
     versionCode = 1
     versionName = "1.0"
 
@@ -131,6 +131,7 @@ tasks.register("copyApkToRoot") {
         if (src.exists()) {
             src.copyTo(dest, overwrite = true)
             println("APK copied successfully to: ${dest.absolutePath}")
+            println("APK File Size: ${dest.length()} bytes")
         } else {
             println("Source APK not found at: ${src.absolutePath}")
         }
