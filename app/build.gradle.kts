@@ -122,3 +122,18 @@ dependencies {
   "ksp"(libs.androidx.room.compiler)
   "ksp"(libs.moshi.kotlin.codegen)
 }
+
+tasks.register("copyApkToRoot") {
+    dependsOn("assembleDebug")
+    doLast {
+        val src = file("build/outputs/apk/debug/app-debug.apk")
+        val dest = file("../BolaKuy2026.apk")
+        if (src.exists()) {
+            src.copyTo(dest, overwrite = true)
+            println("APK copied successfully to: ${dest.absolutePath}")
+        } else {
+            println("Source APK not found at: ${src.absolutePath}")
+        }
+    }
+}
+
